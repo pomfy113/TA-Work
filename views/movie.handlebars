@@ -1,2 +1,7 @@
 <h1>{{movie.im:name.label}}</h1>
 <img class='movie-image' src={{movie.im:image.2.label}}/>
+
+<!-- <iframe src={{movie.link.1.attributes.href}} width='600px' height='250px' autoplay='false'> -->
+<video width="400px" height="170px" controls>
+    <source src={{movie.link.1.attributes.href}} type={{movie.link.1.attributes.type}}>
+</video>
