@@ -11,22 +11,43 @@ a.movie {
     text-decoration: none;
 }
 
-.movie-content {
+.home-movie-content {
     display: flex;
     width: 450px;
     margin: 10px;
     border: 1px solid grey;
 }
 
-.movie-content:hover {
+.home-movie-content:hover {
     background-color: #EEE;
 }
 
-.movie-data {
+.home-movie-data {
     margin-left: 10px;
     color: black;
 }
 
-.movie-data p {
+.home-movie-data p {
     margin: 0px;
+}
+/* Individual movies  */
+
+.movie-content {
+    display: grid;
+    width: 50%;
+    grid-template-columns: 1fr 4fr;
+    margin: 20px 5px;
+}
+
+.movie-image {
+    grid-column: 1;
+}
+
+.movie-text {
+    margin-left: 10px;
+    grid-column: 2;
+}
+
+.movie-summary p{
+    margin: 0px 5px;
 }

@@ -2,10 +2,10 @@
 
 <div id='home-container'>
 {{#each movies}}
-    <a class='movie' href='/movie/{{@index}}'>
-        <div class='movie-content'>
-            <img class='movie-image' src={{im:image.2.label}}/>
-            <div class='movie-data'>
+    <a class='home-movie' href='/movie/{{@index}}'>
+        <div class='home-movie-content'>
+            <img class='home-movie-image' src={{im:image.2.label}}/>
+            <div class='home-movie-data'>
                 <h2>{{im:name.label}}</h2>
                 <p><b>Release:</b> {{im:releaseDate.attributes.label}}</p>
                 <p><b>Price:</b> {{im:price.label}}
