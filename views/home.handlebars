@@ -1,12 +1,16 @@
 <h1>Top 25 Movies</h1>
 
-
+<div id='home-container'>
 {{#each movies}}
-    <div>
-        <h2>{{im:name.label}}</h2>
-        <img src={{im:image.2.label}}/>
-    </div>
+    <a class='movie' href='/movie/{{@index}}'>
+        <div class='movie-content'>
+            <img class='movie-image' src={{im:image.2.label}}/>
+            <div class='movie-data'>
+                <h2>{{im:name.label}}</h2>
+                <p><b>Release:</b> {{im:releaseDate.attributes.label}}</p>
+                <p><b>Price:</b> {{im:price.label}}
+            </div>
+        </div>
+    </a>
 {{/each}}
-
-<script>
-</script>
+</div>

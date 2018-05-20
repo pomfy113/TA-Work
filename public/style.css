@@ -1,3 +1,32 @@
 header {
     border-bottom: 1px solid grey;
 }
+
+#home-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+a.movie {
+    text-decoration: none;
+}
+
+.movie-content {
+    display: flex;
+    width: 450px;
+    margin: 10px;
+    border: 1px solid grey;
+}
+
+.movie-content:hover {
+    background-color: #EEE;
+}
+
+.movie-data {
+    margin-left: 10px;
+    color: black;
+}
+
+.movie-data p {
+    margin: 0px;
+}
