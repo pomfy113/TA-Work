@@ -1,8 +1,13 @@
 <h1>{{movie.im:name.label}}</h1>
 
 <div class='movie-content'>
-    <img class='movie-image' src={{movie.im:image.2.label}}/>
-    <div class='movie-text'>
+    <!-- Move poster and link to official site -->
+    <div class='movie-image-cont'>
+        <img class='movie-image' src={{movie.im:image.2.label}} width='170px' height='255px'/>
+        <a href={{movie.link.0.attributes.href}}><button>Official iTunes Site</button></a>
+    </div>
+    <!-- Other info-->
+    <div class='movie-text-cont'>
         <p><b>Release:</b> {{movie.im:releaseDate.attributes.label}}</p>
         <div class='movie-summary'>
             <b>Summary:</b>

@@ -31,23 +31,43 @@ a.movie {
     margin: 0px;
 }
 /* Individual movies  */
-
 .movie-content {
     display: grid;
     width: 50%;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 5fr;
     margin: 20px 5px;
 }
 
-.movie-image {
-    grid-column: 1;
+.movie-image-cont {
+    text-align: center;
+    align-self: center;
 }
 
-.movie-text {
+    .movie-image {
+        grid-column: 1;
+    }
+
+    .movie-image-cont button {
+        background-color: white;
+        width: 100%;
+        border: 1px solid grey;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .movie-image-cont button:active {
+        background-color: #DDD;
+    }
+
+    .movie-image-cont button:hover {
+        cursor: pointer;
+    }
+
+.movie-text-cont {
     margin-left: 10px;
     grid-column: 2;
 }
 
-.movie-summary p{
-    margin: 0px 5px;
-}
+    .movie-summary p{
+        margin: 0px 5px;
+    }
