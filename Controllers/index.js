@@ -2,12 +2,15 @@ const request = require('request');
 
 module.exports = function(app) {
     app.get('/', (req, res) => {
+        // We're grabbing data from this url
         const url = 'https://itunes.apple.com/us/rss/topmovies/limit=25/json'
 
-        // We're using the 'request' library to grab data from this API
+        // We're using the 'request' library to grab data from the URL above,
+        // Then we're throwing it into the html page to display
         request(url, function(err, response, body){
             // If we get a success status, then we render
             if(!err && response.statusCode == '200'){
+                // Remember the variable 'movies' when you check the html
                 res.render('home', {movies: JSON.parse(body).feed.entry})
             }
             // Otherwise, we'll send an error
