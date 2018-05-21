@@ -1,5 +1,24 @@
+/* Notice how we can do two elements at once! */
+body, html{
+    margin: 0px;
+}
+
 header {
     border-bottom: 1px solid grey;
+    background-color: #222;
+}
+
+/* This grabs the immediate child of this element that matches! */
+header>h1{
+    padding: 10px;
+    margin: 0px;
+}
+/* This is how we go further to get any matching child of this element
+The a is two layers in and is not immediately under the header
+*/
+header a{
+    color: #EEE;
+    text-decoration: none;
 }
 
 #home-container {
@@ -7,10 +26,15 @@ header {
     flex-wrap: wrap;
 }
 
-a.movie {
+/* This is how we match something that must have both selectors */
+.home-movie {
     text-decoration: none;
 }
 
+/* Flexbox! One of two rather handy
+items to have when it comes to front-end.
+This might require some explanation,
+but notice how the objects flow from left to right */
 .home-movie-content {
     display: flex;
     width: 450px;
@@ -30,7 +54,12 @@ a.movie {
 .home-movie-data p {
     margin: 0px;
 }
+
 /* Individual movies  */
+/* Notice how this is a GRID this time
+Other than flexbox, this is another great tool
+for front end
+*/
 .movie-content {
     display: grid;
     width: 50%;
@@ -55,6 +84,9 @@ a.movie {
         padding: 5px;
     }
 
+    /* Now we're touching on statuses, such as active or hover
+    The :hover means if you hover over them with your mouse, while
+    the :active means if they're currently the active element */
     .movie-image-cont button:active {
         background-color: #DDD;
     }

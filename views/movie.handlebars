@@ -2,13 +2,16 @@
 
 <div class='movie-content'>
     <!-- Move poster and link to official site -->
+    <!-- This will take 1fr, according to the grid, or 1/5 of the space -->
     <div class='movie-image-cont'>
         <img class='movie-image' src={{movie.im:image.2.label}} width='170px' height='255px'/>
         <a href={{movie.link.0.attributes.href}}><button>Official iTunes Site</button></a>
     </div>
     <!-- Other info-->
+    <!-- This will take 4fr, according to the grid, or 4/5 of the space -->
     <div class='movie-text-cont'>
         <p><b>Release:</b> {{movie.im:releaseDate.attributes.label}}</p>
+        <p><b>Price:</b> {{movie.im:price.label}}</p>
         <div class='movie-summary'>
             <b>Summary:</b>
             <p>{{{movie.summary.label}}}</p>
@@ -16,7 +19,7 @@
     </div>
 </div>
 
-
-<video width="400px" height="170px" controls>
+<!-- For videos, we can either use the video tag or the iframe tag -->
+<video class='movie-trailer' width="100%" height="auto" controls>
     <source src={{movie.link.1.attributes.href}} type={{movie.link.1.attributes.type}}>
 </video>
