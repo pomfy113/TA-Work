@@ -8,18 +8,19 @@
 {{#each movies}}
     <!--
         The "@index" grabs the index. Rather handy!
+        We'll use this to traverse elements.
     -->
     <a class='home-movie' href='/movie/{{@index}}'>
         <div class='home-movie-content'>
             <!--
                 This looks intimidating, but lets break it down
                 Each item in 'movies' has properties like 'im:image',
-                which is an array. Index 2 has a label.
+                which is an array. The 2nd element has a label.
             -->
             <img class='home-movie-image' src={{im:image.2.label}}/>
             <!--
                 Same here; each movie has an im:name,
-                and each of those has a label
+                and name has a label.
             -->
             <div class='home-movie-data'>
                 <h2>{{im:name.label}}</h2>

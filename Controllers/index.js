@@ -24,7 +24,9 @@ module.exports = function(app) {
         const url = 'https://itunes.apple.com/us/rss/topmovies/limit=25/json'
         const movie = req.params.id
 
-        // Same as the first, but with something different
+        // Same as the first, but with something different; we're using a parameter
+        // This parameter SHOULD have the movie's index in the top 25 movies!
+        // However, what happens if you put something invalid like the 26th movie?
         request(url, function(err, response, body){
             // If we get a success status, then we render the index of the movie
             if(!err && response.statusCode == '200'){
